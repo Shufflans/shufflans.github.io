@@ -1,5 +1,22 @@
 /* --- PÁGINA COMPLETA --- */
+:root {
+    /* -- FONDOS --*/
+    --fondo-base: #0d0d1a;
+    --superficie: #13132b;
 
+    /* -- TEXTOS -- */
+    --texto-principal: #f6f0ff;
+    --texto-secundario: #9333EA;
+    --texto-muted: #9c88b2;
+
+    /* -- ACENTOS -- */
+    --acento-principal: #b84af0;
+    --acento-frio: #c87cf7;
+
+    /* -- BORDES --*/
+    --borde-brillante: rgba(184, 74, 240, 0.2);
+    --borde-fuerte: rgba(184, 74, 240, 0.4);
+}
 .container {
     min-height: 100dvh;
     display: grid;
@@ -7,8 +24,8 @@
 }
 
 body {
-    background-color: #1e1e1e;
-    color: white;
+    background-color: var(--fondo-base);
+    color: var(--texto-principal);
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -17,8 +34,8 @@ body {
 
 /* --- Navegador --- */
 .main-nav {
-    background-color: #252526;
-    border-bottom: 1px solid #333;
+    background-color: var(--superficie);
+    border-bottom: 1px solid var(--borde-brillante);
     padding: 5px 0;
 
 }
@@ -33,15 +50,15 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #4CAF50;
+    color: var(--texto-secundario);
     transition: all 0.3s ease;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #00ffaa;
-    text-decoration: underline;
-    text-shadow: 0 0 10px #00ff88;
+    color: var(--acento-frio);
+
+    text-shadow: 0 0 10px var(--acento-frio);
 }
 
 /* --- MAIN ---- */
@@ -57,31 +74,31 @@ body {
 }
 
 .strong-main {
-    color: #4CAF50;
+    color: var(--acento-principal);
 }
 
 .btn-projects {
     display: inline-block;
     margin-top: 30px;
-    background-color: #4CAF50;
-    color: black;
+    background-color: var(--acento-principal);
+    color: var(--texto-principal);
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
 .btn-projects:hover {
-    background-color: #00ffaa;
-    box-shadow: 0 0 15px #00ffaa;
+    background-color: var(--acento-frio);
+    box-shadow: 0 0 15px var(--acento-frio);
 }
 
 /* --- Footer ---- */
 
 .p-footer-main {
-    background-color: #252526;
-    color: #b3b3b3;
+    background-color: var(--superficie);
+    color: var(--texto-secundario);
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--borde-brillante);
     margin: 0;
 }
