@@ -1,22 +1,30 @@
 /* --- PÁGINA COMPLETA --- */
+
+
+
 :root {
+    /*-- VERSIÓN ROJA*/
     /* -- FONDOS --*/
     --fondo-base: #0d0d1a;
-    --superficie: #13132b;
+    --superficie: #0d0816;
 
     /* -- TEXTOS -- */
-    --texto-principal: #f6f0ff;
-    --texto-secundario: #9333EA;
-    --texto-muted: #9c88b2;
+    --texto-principal: #f0e0e8;
+    --texto-secundario: #892b64;
+    --texto-terciario: #5c4d7d;
+    --texto-muted: #7a6070;
+    --texto-footer: #3d1a2e;
+    --texto-btn: #f9f0f4;
 
     /* -- ACENTOS -- */
-    --acento-principal: #b84af0;
+    --acento-principal: #b7094c;
     --acento-frio: #c87cf7;
 
     /* -- BORDES --*/
-    --borde-brillante: rgba(184, 74, 240, 0.2);
-    --borde-fuerte: rgba(184, 74, 240, 0.4);
+    --borde-brillante: rgba(183, 9, 76, 0.2);
+    --borde-btn: rgba(137, 43, 100, 0.4);
 }
+
 .container {
     min-height: 100dvh;
     display: grid;
@@ -34,7 +42,7 @@ body {
 
 /* --- Navegador --- */
 .main-nav {
-    background-color: var(--superficie);
+    background-color: var(--fondo-base);
     border-bottom: 1px solid var(--borde-brillante);
     padding: 5px 0;
 
@@ -55,6 +63,13 @@ body {
     font-weight: bold;
 }
 
+.nav-link-home {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: var(--acento-principal)
+}
+
 .nav-link:hover {
     color: var(--acento-frio);
 
@@ -63,32 +78,53 @@ body {
 
 /* --- MAIN ---- */
 
-.main-title {
+h1 {
     margin-top: 100px;
+    color: var(--texto-principal);
 }
 
-.p-main {
+.hero-init {
+    color: var(--texto-terciario);
+}
+
+.hero-description {
     max-width: 600px;
     margin: auto;
     word-spacing: 1.6px;
+    color: var(--texto-muted);
 }
 
 .strong-main {
     color: var(--acento-principal);
 }
 
-.btn-projects {
+.btn-primario {
     display: inline-block;
     margin-top: 30px;
     background-color: var(--acento-principal);
-    color: var(--texto-principal);
+    color: var(--texto-btn);
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
-.btn-projects:hover {
+.btn-secundario {
+    display: inline-block;
+    margin-top: 30px;
+    background-color:var(--fondo-base);
+    border: 1px solid var(--borde-btn);
+    color: var(--texto-secundario);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-primario:hover {
     background-color: var(--acento-frio);
+    box-shadow: 0 0 15px var(--acento-frio);
+}
+
+.btn-secundario:hover {
+    background-color: var(--fondo-base);
     box-shadow: 0 0 15px var(--acento-frio);
 }
 
@@ -96,7 +132,7 @@ body {
 
 .p-footer-main {
     background-color: var(--superficie);
-    color: var(--texto-secundario);
+    color: var(--texto-footer);
     text-align: center;
     padding: 20px;
     border-top: 1px solid var(--borde-brillante);
